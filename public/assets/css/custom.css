@@ -1,0 +1,16 @@
+.auth-nav li{
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+.auth-nav li:first-child{
+    margin-left: 15px !important;
+}
+.auth-nav li a:first-child{
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+
+}
+.auth-nav li a:last-child{
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}

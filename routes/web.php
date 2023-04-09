@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ListingsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuccessStoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/listings', [ListingsController::class, 'index'])->name('listings');
+Route::get('/add-listings', [ListingsController::class, 'create'])->name('listings.create');
+Route::get('/success-stories', [SuccessStoriesController::class, 'index'])->name('success-stories');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('backend.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
