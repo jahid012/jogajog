@@ -23,8 +23,10 @@ Route::get('/add-listings', [ListingsController::class, 'create'])->name('listin
 Route::get('/success-stories', [SuccessStoriesController::class, 'index'])->name('success-stories');
 
 Route::get('/dashboard', function () {
-    return view('backend.dashboard');
+    return view('backend.pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/add-listings', [ListingsController::class, 'createByDashboard'])->name('dashboard.listings.create');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

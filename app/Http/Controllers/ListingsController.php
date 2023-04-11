@@ -13,4 +13,8 @@ class ListingsController extends Controller
     public function create(){
         return view('frontend.pages.listings.add');
     }
+
+    public function createByDashboard(){
+        return view('backend.pages.add-listings');
+    }
 }
