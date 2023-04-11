@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="{{asset('assets/css/icon-font.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap-datepicker.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 </head>
 
 <body>

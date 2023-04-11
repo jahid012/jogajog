@@ -1,8 +1,13 @@
 <?php
 
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\BookmarksController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListingsController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\MyListingsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\SuccessStoriesController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +30,13 @@ Route::get('/success-stories', [SuccessStoriesController::class, 'index'])->name
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/dashboard/add-listings', [ListingsController::class, 'createByDashboard'])->name('dashboard.listings.create');
+Route::get('/dashboard/add-listings', [ListingsController::class, 'createByDashboard'])->middleware(['auth', 'verified'])->name('dashboard.listings.create');
+Route::get('/dashboard/messages', [MessageController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.message.index');
+Route::get('/dashboard/bookings', [BookingController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.booking.index');
+
+Route::get('/dashboard/my-listings', [MyListingsController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.mylisting.index');
+Route::get('/dashboard/bookmarks', [BookmarksController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.bookmark.index');
+Route::get('/dashboard/reviews', [ReviewsController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.review.index');
 
 
 Route::middleware('auth')->group(function () {

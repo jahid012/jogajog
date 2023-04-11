@@ -13,7 +13,7 @@
 							<div class="row">
 								<div class="col-6 collapse-brand">
 									<div id="logo">
-										<a href="#"><img src="{{asset('assets/images/logo-white.png')}}" class="img-fluid" alt=""></a>
+										<a href="{{route('home')}}"><img src="{{asset('assets/images/logo-white.png')}}" class="img-fluid" alt=""></a>
 									</div>
 								</div>
 								<div class="col-6 collapse-close">
@@ -25,7 +25,7 @@
 							</div>
 						</div>
                         @include('backend.components.navigation')
-						<ul class="navbar-nav ml-lg-auto">
+						<ul class="navbar-nav ml-lg-auto c-align-left">
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" id="navbar-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets/images/thumb-4.jpg')}}" class="img-fluid rounded-circle shadow-lg mr-1" width="40" height="50" alt="">Ethan Moore</a>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
