@@ -1,7 +1,8 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+window.Vue = require('vue');
 
-window.Alpine = Alpine;
-
-Alpine.start();
+Vue.component('mainapp',)
+const app = new Vue({
+    el: '#app'
+})

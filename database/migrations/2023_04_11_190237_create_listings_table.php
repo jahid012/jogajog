@@ -15,12 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('bussiness_name')->nullable();
             $table->text('abilities')->nullable();
-            $table->text('abilities')->nullable();
-            $table->text('abilities')->nullable();
-            $table->text('abilities')->nullable();
-            $table->text('abilities')->nullable();
-            $table->text('abilities')->nullable();
-            $table->text('abilities')->nullable();
+
             $table->timestamps();
         });
     }
