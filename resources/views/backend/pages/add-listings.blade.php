@@ -14,7 +14,7 @@
         <div class="col-lg-12">
             <div id="add-listing">
                 <!-- Section -->
-                <form method="post" action="">
+                <form method="post" action="{{route('dashboard.listings.store')}}">
                 <div class="add-listing-section mb-4">
                     <!-- Headline -->
                     <div class="add-listing-headline">
@@ -24,7 +24,7 @@
                     <div class="row with-forms">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" placeholder="Business Name" class="form-control form-control-alternative">
+                                <input type="text" name="listing_name" placeholder="Listing Name" class="form-control form-control-alternative">
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="row with-forms">
                         <!-- Status -->
                         <div class="col-md-6">
-                            <select class="custom-select form-control-alternative mb-3">
+                            <select name="category" class="custom-select form-control-alternative mb-3">
                      <option label="blank">Select Category</option>
                      <option>Eat & Drink</option>
                      <option>Shops</option>
@@ -45,7 +45,7 @@
                         <!-- Type -->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="Keywords" class="form-control form-control-alternative">
+                                <input name="keywords" type="text" placeholder="Keywords" class="form-control form-control-alternative">
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                         <div class="row with-forms">
                             <!-- City -->
                             <div class="col-md-6">
-                                <select class="custom-select form-control-alternative mb-3">
+                                <select name="location" class="custom-select form-control-alternative mb-3">
                         <option label="blank">Select City</option>
                         <option>New York</option>
                         <option>Los Angeles</option>
@@ -77,19 +77,19 @@
                             <!-- Address -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" placeholder="e.g. 964 School Street" class="form-control form-control-alternative">
+                                    <input name="street" type="text" placeholder="e.g. 964 School Street" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <!-- City -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" placeholder="State" class="form-control form-control-alternative">
+                                    <input name="state" type="text" placeholder="State" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <!-- Zip-Code -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Zip Code" class="form-control form-control-alternative">
+                                    <input name="zipcode" type="text" placeholder="Zip Code" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
@@ -106,22 +106,22 @@
                     <div class="add-listing-headline">
                         <h3> Details</h3>
                     </div>
-                    <div class="form summernote">
+                    <div class="form summernote mb-3">
                         <textarea id="summernote" name="details"></textarea>
                     </div>
                     <!-- Row -->
                     <div class="row with-forms">
                         <!-- Phone -->
                         <div class="col-md-4">
-                            <input type="text" placeholder="Phone" class="form-control form-control-alternative">
+                            <input name="phone" type="text" placeholder="Phone" class="form-control form-control-alternative">
                         </div>
                         <!-- Website -->
                         <div class="col-md-4">
-                            <input type="text" placeholder="Website" class="form-control form-control-alternative">
+                            <input name="website" type="text" placeholder="Website" class="form-control form-control-alternative">
                         </div>
                         <!-- Email Address -->
                         <div class="col-md-4">
-                            <input type="text" placeholder="E-mail" class="form-control form-control-alternative">
+                            <input name="e_mail" type="text" placeholder="E-mail" class="form-control form-control-alternative">
                         </div>
                     </div>
                     <!-- Row / End -->
@@ -130,38 +130,34 @@
                         <!-- Phone -->
                         <div class="col-md-4">
                             <h5 class="fb-input"><i class="fa fa-facebook-square"></i> Facebook <span>(optional)</span></h5>
-                            <input type="text" class="form-control form-control-alternative" placeholder="https://www.facebook.com/">
+                            <input name="facebook" type="text" class="form-control form-control-alternative" placeholder="https://www.facebook.com/">
                         </div>
                         <!-- Website -->
                         <div class="col-md-4">
-                            <h5 class="twitter-input"><i class="fa fa-twitter"></i> Twitter <span>(optional)</span></h5>
-                            <input type="text" class="form-control form-control-alternative" placeholder="https://www.twitter.com/">
+                            <h5 class="twitter-input"><i class="fa fa-twitter"></i> YouTube <span>(optional)</span></h5>
+                            <input name="youtube" type="text" class="form-control form-control-alternative" placeholder="https://www.twitter.com/">
                         </div>
-                        <!-- Email Address -->
-                        <div class="col-md-4">
-                            <h5 class="gplus-input"><i class="fa fa-google-plus"></i> Google Plus <span>(optional)</span></h5>
-                            <input type="text" class="form-control form-control-alternative" placeholder="https://plus.google.com/">
-                        </div>
+
                     </div>
                     <!-- Row / End -->
                     <!-- Checkboxes -->
                     <h5 class="margin-top-30 margin-bottom-10">Amenities <span>(optional)</span></h5>
                     <div class="checkboxes in-row margin-bottom-20">
-                        <input id="check-a" type="checkbox" name="check">
+                        <input id="check-a" type="checkbox" name="amenities">
                         <label for="check-a">Elevator in building</label>
-                        <input id="check-b" type="checkbox" name="check">
+                        <input id="check-b" type="checkbox" name="amenities">
                         <label for="check-b">Friendly workspace</label>
-                        <input id="check-c" type="checkbox" name="check">
+                        <input id="check-c" type="checkbox" name="amenities">
                         <label for="check-c">Instant Book</label>
-                        <input id="check-d" type="checkbox" name="check">
+                        <input id="check-d" type="checkbox" name="amenities">
                         <label for="check-d">Wireless Internet</label>
-                        <input id="check-e" type="checkbox" name="check">
+                        <input id="check-e" type="checkbox" name="amenities">
                         <label for="check-e">Free parking on premises</label>
-                        <input id="check-f" type="checkbox" name="check">
+                        <input id="check-f" type="checkbox" name="amenities">
                         <label for="check-f">Free parking on street</label>
-                        <input id="check-g" type="checkbox" name="check">
+                        <input id="check-g" type="checkbox" name="amenities">
                         <label for="check-g">Smoking allowed</label>
-                        <input id="check-h" type="checkbox" name="check">
+                        <input id="check-h" type="checkbox" name="amenities">
                         <label for="check-h">Events</label>
                     </div>
                     <!-- Checkboxes / End -->
@@ -173,7 +169,7 @@
                     <div class="add-listing-headline">
                         <h3> Opening Hours</h3>
                         <!-- Switcher -->
-                        <label class="switch"><input type="checkbox" checked><span class="slider round"></span></label>
+                        <label class="switch"><input name="opening_hour_status" type="checkbox" checked><span class="slider round"></span></label>
                     </div>
                     <!-- Switcher ON-OFF Content -->
                     <div class="switcher-content">
@@ -183,7 +179,7 @@
                                 <h5>Monday</h5>
                             </div>
                             <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
+                                <select name="opening_time" class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
                         <option label="Opening Time"></option>
                         <option>Closed</option>
                         <option>1 AM</option>
@@ -213,7 +209,7 @@
                      </select>
                             </div>
                             <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
+                                <select name="closing_time" class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
                         <option label="Closing Time"></option>
                         <option>Closed</option>
                         <option>1 AM</option>
@@ -256,7 +252,7 @@
                     <div class="add-listing-headline mb-0">
                         <h3> Pricing</h3>
                         <!-- Switcher -->
-                        <label class="switch"><input type="checkbox" checked><span class="slider round"></span></label>
+                        <label class="switch"><input name="pricing_status" type="checkbox" checked><span class="slider round"></span></label>
                     </div>
                     <!-- Switcher ON-OFF Content -->
                     <div class="switcher-content">
@@ -265,14 +261,14 @@
                                 <table id="pricing-list-container">
                                     <tr class="pricing-list-item pattern">
                                         <td>
-                                            <div class="fm-input pricing-name"><input type="text" placeholder="Title" class="form-control form-control-alternative" /></div>
-                                            <div class="fm-input pricing-ingredients"><input type="text" placeholder="Description" class="form-control form-control-alternative" /></div>
-                                            <div class="fm-input pricing-price"><input type="text" placeholder="Price" class="form-control form-control-alternative" /></div>
+                                            <div class="fm-input pricing-name"><input name="pricing_title" type="text" placeholder="Title" class="form-control form-control-alternative" /></div>
+                                            <div class="fm-input pricing-ingredients"><input name="pricing_description" type="text" placeholder="Description" class="form-control form-control-alternative" /></div>
+                                            <div class="fm-input pricing-price"><input type="text" name="pricing_price" placeholder="Price" class="form-control form-control-alternative" /></div>
                                         </td>
                                     </tr>
                                 </table>
-                                <div class="mt-3"> <a href="#" class="btn btn-primary">Add Item</a>
-                                    <a href="#" class="btn btn-primary">Add Category</a>
+                                <div class="mt-3"> 
+                                    <a href="#" class="btn btn-primary">Add Item</a>
                                 </div>
                             </div>
                         </div>
@@ -280,7 +276,9 @@
                     <!-- Switcher ON-OFF Content / End -->
                 </div>
                 <!-- Section / End -->
-                <a href="#" class="btn btn-danger">Preview <i class="fa fa-arrow-circle-right"></i></a>
+                <button type="submit" class="btn btn-danger">Preview <i class="fa fa-arrow-circle-right"></i></button>
+                @csrf
+                </form>
             </div>
         </div>
         <!-- Copyrights -->
