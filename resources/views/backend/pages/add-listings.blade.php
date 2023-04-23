@@ -1,9 +1,20 @@
+@push('styles')
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<style>
+.summernote .btn-default{
+    color: #4a4a4a;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+</style>
+@endpush
 @extends('backend.app')
 @section('dashboard')
     <div class="row">
         <div class="col-lg-12">
             <div id="add-listing">
                 <!-- Section -->
+                <form method="post" action="">
                 <div class="add-listing-section mb-4">
                     <!-- Headline -->
                     <div class="add-listing-headline">
@@ -95,8 +106,8 @@
                     <div class="add-listing-headline">
                         <h3> Details</h3>
                     </div>
-                    <div class="form">
-                        <textarea class="form-control form-control-alternative" placeholder="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <div class="form summernote">
+                        <textarea id="summernote" name="details"></textarea>
                     </div>
                     <!-- Row -->
                     <div class="row with-forms">
@@ -234,407 +245,7 @@
                         </div>
                         <!-- Day / End -->
                         <!-- Day -->
-                        <div class="row opening-day js-demo-hours">
-                            <div class="col-md-2">
-                                <h5>Tuesday</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
-                        <option label="Opening Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
-                        <option label="Closing Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                        </div>
-                        <!-- Day / End -->
-                        <!-- Day -->
-                        <div class="row opening-day js-demo-hours">
-                            <div class="col-md-2">
-                                <h5>Wednesday</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
-                        <option label="Opening Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
-                        <option label="Closing Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                        </div>
-                        <!-- Day / End -->
-                        <!-- Day -->
-                        <div class="row opening-day js-demo-hours">
-                            <div class="col-md-2">
-                                <h5>Thursday</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
-                        <option label="Opening Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
-                        <option label="Closing Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                        </div>
-                        <!-- Day / End -->
-                        <!-- Day -->
-                        <div class="row opening-day js-demo-hours">
-                            <div class="col-md-2">
-                                <h5>Friday</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
-                        <option label="Opening Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
-                        <option label="Closing Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                        </div>
-                        <!-- Day / End -->
-                        <!-- Day -->
-                        <div class="row opening-day js-demo-hours">
-                            <div class="col-md-2">
-                                <h5>Saturday</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
-                        <option label="Opening Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
-                        <option label="Closing Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                        </div>
-                        <!-- Day / End -->
-                        <!-- Day -->
-                        <div class="row opening-day js-demo-hours">
-                            <div class="col-md-2">
-                                <h5>Sunday</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Opening Time">
-                        <option label="Opening Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="custom-select form-control-alternative mb-3" data-placeholder="Closing Time">
-                        <option label="Closing Time"></option>
-                        <option>Closed</option>
-                        <option>1 AM</option>
-                        <option>2 AM</option>
-                        <option>3 AM</option>
-                        <option>4 AM</option>
-                        <option>5 AM</option>
-                        <option>6 AM</option>
-                        <option>7 AM</option>
-                        <option>8 AM</option>
-                        <option>9 AM</option>
-                        <option>10 AM</option>
-                        <option>11 AM</option>
-                        <option>12 AM</option>
-                        <option>1 PM</option>
-                        <option>2 PM</option>
-                        <option>3 PM</option>
-                        <option>4 PM</option>
-                        <option>5 PM</option>
-                        <option>6 PM</option>
-                        <option>7 PM</option>
-                        <option>8 PM</option>
-                        <option>9 PM</option>
-                        <option>10 PM</option>
-                        <option>11 PM</option>
-                        <option>12 PM</option>
-                     </select>
-                            </div>
-                        </div>
-                        <!-- Day / End -->
+                        
                     </div>
                     <!-- Switcher ON-OFF Content / End -->
                 </div>
@@ -678,3 +289,19 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#summernote').summernote({
+        placeholder: 'Enter Your Details Here',
+
+        minHeight: 320,
+
+    });
+});    
+
+</script>
+
+@endpush

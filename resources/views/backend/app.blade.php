@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap-datepicker.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+    @stack('styles')
 </head>
 
 <body>
@@ -53,6 +54,7 @@
     <script type="text/javascript" src="{{asset('assets/scripts/bootstrap-datepicker.min.js')}}"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script> -->
     <script type="text/javascript" src="{{asset('assets/scripts/custom.js')}}"></script>
+    @stack('scripts')
     </body>
     
     
