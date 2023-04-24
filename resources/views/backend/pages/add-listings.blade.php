@@ -1,5 +1,6 @@
 @push('styles')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link href="https://christianbayer.github.io/image-uploader/dist/image-uploader.min.css" rel="stylesheet">
 <style>
 .summernote .btn-default{
     color: #4a4a4a;
@@ -14,7 +15,7 @@
         <div class="col-lg-12">
             <div id="add-listing">
                 <!-- Section -->
-                <form method="post" action="{{route('dashboard.listings.store')}}">
+                <form method="post" enctype="multipart/form-data" action="{{route('dashboard.listings.store')}}">
                 <div class="add-listing-section mb-4">
                     <!-- Headline -->
                     <div class="add-listing-headline">
@@ -52,6 +53,15 @@
                     <!-- Row / End -->
                 </div>
                 <!-- Section / End -->
+                <div class="add-listing-section mb-4">
+                    <!-- Headline -->
+                    <div class="add-listing-headline">
+                        <h3>Thumbnails</h3>
+                    </div>
+                    <div class="submit-section">
+                            <div class="upload-thumbnail" style="padding-top: .5rem;"></div>
+                    </div>
+                </div>
                 <!-- Section -->
                 <div class="add-listing-section mb-4">
                     <!-- Headline -->
@@ -121,7 +131,7 @@
                         </div>
                         <!-- Email Address -->
                         <div class="col-md-4">
-                            <input name="e_mail" type="text" placeholder="E-mail" class="form-control form-control-alternative">
+                            <input name="email" type="text" placeholder="E-mail" class="form-control form-control-alternative">
                         </div>
                     </div>
                     <!-- Row / End -->
@@ -289,6 +299,7 @@
 @endsection
 
 @push('scripts')
+<script type="text/javascript" src="https://christianbayer.github.io/image-uploader/dist/image-uploader.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -299,7 +310,7 @@ $(document).ready(function() {
 
     });
 });    
-
+$('.upload-thumbnail').imageUploader();
 </script>
 
 @endpush

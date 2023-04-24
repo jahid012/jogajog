@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
-            $table->text('bussiness_name')->nullable();
+            $table->text('listing_name')->nullable();
             $table->integer('category_id')->nullable();
             $table->text('keywords')->nullable();
 
             $table->text('images')->nullable();
             $table->text('videos')->nullable();
 
-            $table->text('contact_phone')->nullable();
-            $table->text('contact_website')->nullable();
-            $table->string('contact_email')->nullable();
+            $table->text('phone')->nullable();
+            $table->text('website')->nullable();
+            $table->string('email')->nullable();
 
             $table->text('description')->nullable();
 
