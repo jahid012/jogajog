@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1be91842b9a904506a80dc1f9f8df0f3",
+    "content-hash": "9880f2c98309b710fefce53b8621921c",
     "packages": [
         {
             "name": "brick/math",
@@ -5406,6 +5406,58 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "xenon/multisms",
+            "version": "v1.0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arif98741/xenon.git",
+                "reference": "1e5717a95f395ea1933d622bf5b6e12e3bf4c944"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arif98741/xenon/zipball/1e5717a95f395ea1933d622bf5b6e12e3bf4c944",
+                "reference": "1e5717a95f395ea1933d622bf5b6e12e3bf4c944",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^6.3|^7.2"
+            },
+            "require-dev": {
+                "filp/whoops": "^2.7@dev",
+                "league/booboo": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xenon\\Multisms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ariful",
+                    "email": "arifsofg@gmail.com"
+                }
+            ],
+            "description": "This is universal sms gateway service provider for Bangladesh. You can easily use this library for sending message using Bangladeshi sms gateway providers",
+            "support": {
+                "issues": "https://github.com/arif98741/xenon/issues",
+                "source": "https://github.com/arif98741/xenon/tree/v1.0.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/arif98741",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2023-04-05T08:39:54+00:00"
         }
     ],
     "packages-dev": [
@@ -7886,5 +7938,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
