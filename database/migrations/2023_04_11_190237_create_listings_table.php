@@ -13,8 +13,29 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
-            $table->text('bussiness_name')->nullable();
-            $table->text('abilities')->nullable();
+            $table->text('listing_name')->nullable();
+            $table->integer('category_id')->nullable();
+            $table->text('keywords')->nullable();
+
+            $table->text('images')->nullable();
+            $table->text('videos')->nullable();
+
+            $table->text('phone')->nullable();
+            $table->text('website')->nullable();
+            $table->string('email')->nullable();
+
+            $table->text('description')->nullable();
+
+            $table->text('locatin_details')->nullable();
+            $table->text('country')->nullable();
+            $table->text('state')->nullable();
+            $table->text('city')->nullable();
+            $table->integer('zip')->nullable();
+
+            $table->text('pricing_one')->nullable();
+            $table->text('pricing_two')->nullable();
+            $table->text('pricing_three')->nullable();
+            $table->text('pricing_four')->nullable();
 
             $table->timestamps();
         });

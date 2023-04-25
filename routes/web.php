@@ -31,6 +31,7 @@ Route::get('/dashboard', function () {
     return view('backend.pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard/add-listings', [ListingsController::class, 'createByDashboard'])->middleware(['auth', 'verified'])->name('dashboard.listings.create');
+Route::post('/dashboard/add-listings', [ListingsController::class, 'store'])->middleware(['auth', 'verified'])->name('dashboard.listings.store');
 Route::get('/dashboard/messages', [MessageController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.message.index');
 Route::get('/dashboard/bookings', [BookingController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.booking.index');
 

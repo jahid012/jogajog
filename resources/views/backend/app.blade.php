@@ -17,7 +17,9 @@
 	<link rel="stylesheet" href="{{asset('assets/css/icon-font.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap-datepicker.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+    @stack('styles')
 </head>
 
 <body>
@@ -37,6 +39,7 @@
     <!-- Wrapper / End -->
     <!-- Scripts
       ================================================== -->
+
     <script type="text/javascript" src="{{asset('assets/scripts/jquery-2.2.0.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/scripts/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/scripts/bootstrap.min.js')}}"></script>
@@ -51,8 +54,11 @@
     <script type="text/javascript" src="{{asset('assets/scripts/tooltips.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/scripts/jquery.countdown.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/scripts/bootstrap-datepicker.min.js')}}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {!! Toastr::message() !!}
     <!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script> -->
     <script type="text/javascript" src="{{asset('assets/scripts/custom.js')}}"></script>
+    @stack('scripts')
     </body>
     
     
