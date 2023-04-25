@@ -60,10 +60,10 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text"><i class="fa fa-envelope"></i></span>
 													</div>
-													<input class="form-control" placeholder="Email" name="email" type="email">
+													<input class="form-control" placeholder="Phone" name="phone" type="phone">
 												</div>
 											</div>
-                                            <x-input-error :messages="$errors->get('email')"/>
+											<x-input-error :messages="$errors->get('phone')"/>
 											<div class="form-group">
 												<div class="input-group input-group-alternative">
 													<div class="input-group-prepend">
